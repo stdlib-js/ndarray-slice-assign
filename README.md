@@ -45,19 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-slice-assign
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-slice-assign/tags). For example,
-
-```javascript
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@v0.1.0-esm/index.mjs';
+var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
 ```
 
 #### sliceAssign( x, y, ...s\[, options] )
@@ -65,11 +76,11 @@ import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-ass
 Assigns element values from a broadcasted input [`ndarray`][@stdlib/ndarray/ctor] to corresponding elements in an output [`ndarray`][@stdlib/ndarray/ctor] view.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Define an input array:
 var buffer = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
@@ -125,11 +136,11 @@ The function supports three (mutually exclusive) means for providing slice argum
 The following example demonstrates each invocation style achieving equivalent results.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@esm/index.mjs';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // 1. Using a MultiSlice:
 var x = scalar2ndarray( 10.0 );
@@ -174,11 +185,11 @@ The function supports the following `options`:
 By default, the function throws an error when provided a slice which exceeds array bounds. To ignore slice indices exceeding array bounds, set the `strict` option to `false`.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@esm/index.mjs';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Define an input array:
 var x = scalar2ndarray( 10.0 );
@@ -234,18 +245,13 @@ var arr = ndarray2array( y );
 
 <!-- eslint-disable new-cap -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@esm/index.mjs';
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@esm/index.mjs';
+```javascript
+var E = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var slice = require( '@stdlib/ndarray-slice' );
+var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
 
 // Alias `null` to allow for more compact indexing expressions:
 var _ = null;
@@ -307,10 +313,6 @@ var a6 = ndarray2array( y );
     ]
   ]
 */
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -342,7 +344,7 @@ var a6 = ndarray2array( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -372,8 +374,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-slice-assign.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-slice-assign
 
-[test-image]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-slice-assign/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-slice-assign?branch=main
@@ -402,19 +404,19 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-slice-assign/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/slice/multi]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
 
 </section>
 
