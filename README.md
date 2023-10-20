@@ -45,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-slice-assign
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@deno/mod.js';
+var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
 ```
 
 #### sliceAssign( x, y, ...s\[, options] )
@@ -60,11 +76,11 @@ import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-ass
 Assigns element values from a broadcasted input [`ndarray`][@stdlib/ndarray/ctor] to corresponding elements in an output [`ndarray`][@stdlib/ndarray/ctor] view.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Define an input array:
 var buffer = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
@@ -120,11 +136,11 @@ The function supports three (mutually exclusive) means for providing slice argum
 The following example demonstrates each invocation style achieving equivalent results.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // 1. Using a MultiSlice:
 var x = scalar2ndarray( 10.0 );
@@ -169,11 +185,11 @@ The function supports the following `options`:
 By default, the function throws an error when provided a slice which exceeds array bounds. To ignore slice indices exceeding array bounds, set the `strict` option to `false`.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Define an input array:
 var x = scalar2ndarray( 10.0 );
@@ -230,12 +246,12 @@ var arr = ndarray2array( y );
 <!-- eslint-disable new-cap -->
 
 ```javascript
-import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@deno/mod.js';
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@deno/mod.js';
+var E = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var slice = require( '@stdlib/ndarray-slice' );
+var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
 
 // Alias `null` to allow for more compact indexing expressions:
 var _ = null;
@@ -328,7 +344,7 @@ var a6 = ndarray2array( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -388,19 +404,19 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-slice-assign/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/slice/multi]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
 
 </section>
 
