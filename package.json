@@ -46,7 +46,7 @@
     "@stdlib/ndarray-base-assert-is-read-only": "^0.1.1",
     "@stdlib/ndarray-base-slice-assign": "^0.1.0",
     "@stdlib/ndarray-shape": "^0.1.0",
-    "@stdlib/slice-base-args2multislice": "github:stdlib-js/slice-base-args2multislice#main",
+    "@stdlib/slice-base-args2multislice": "^0.1.0",
     "@stdlib/slice-multi": "^0.1.0",
     "@stdlib/string-format": "^0.1.1",
     "@stdlib/types": "^0.1.0"
