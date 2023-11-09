@@ -331,6 +331,14 @@ var a6 = ndarray2array( y );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/ndarray-array`][@stdlib/ndarray/array]</span><span class="delimiter">: </span><span class="description">multidimensional arrays.</span>
+-   <span class="package-name">[`@stdlib/ndarray-ctor`][@stdlib/ndarray/ctor]</span><span class="delimiter">: </span><span class="description">multidimensional array constructor.</span>
+-   <span class="package-name">[`@stdlib/ndarray-slice`][@stdlib/ndarray/slice]</span><span class="delimiter">: </span><span class="description">return a read-only view of an input ndarray.</span>
+
 </section>
 
 <!-- /.related -->
@@ -404,19 +412,27 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-slice-assign/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/stdlib
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/stdlib
+[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
 
-[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/ndarray-safe-casts
 
-[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/ndarray-same-kind-casts
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+
+<!-- <related-links> -->
+
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
+
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
+
+<!-- </related-links> -->
 
 </section>
 
