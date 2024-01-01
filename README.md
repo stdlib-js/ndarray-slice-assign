@@ -45,30 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-slice-assign
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
+sliceAssign = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var sliceAssign = require( 'path/to/vendor/umd/ndarray-slice-assign/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.sliceAssign;
+})();
+</script>
 ```
 
 #### sliceAssign( x, y, ...s\[, options] )
@@ -245,13 +253,18 @@ var arr = ndarray2array( y );
 
 <!-- eslint-disable new-cap -->
 
-```javascript
-var E = require( '@stdlib/slice-multi' );
-var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var ndzeros = require( '@stdlib/ndarray-zeros' );
-var slice = require( '@stdlib/ndarray-slice' );
-var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 // Alias `null` to allow for more compact indexing expressions:
 var _ = null;
@@ -313,6 +326,11 @@ var a6 = ndarray2array( y );
     ]
   ]
 */
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -412,25 +430,25 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-slice-assign/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor/tree/umd
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
+[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi/tree/umd
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/umd
 
-[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/ndarray-safe-casts
+[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/ndarray-safe-casts/tree/umd
 
-[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/ndarray-same-kind-casts
+[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/ndarray-same-kind-casts/tree/umd
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array/tree/umd
 
-[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice/tree/umd
 
 <!-- </related-links> -->
 
