@@ -45,19 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-slice-assign
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-slice-assign/tags). For example,
-
-```javascript
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@v0.2.1-deno/mod.js';
+var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
 ```
 
 #### sliceAssign( x, y, ...s\[, options] )
@@ -65,11 +78,11 @@ import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-ass
 Assigns element values from a broadcasted input [`ndarray`][@stdlib/ndarray/ctor] to corresponding elements in an output [`ndarray`][@stdlib/ndarray/ctor] view.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Define an input array:
 var buffer = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
@@ -125,11 +138,11 @@ The function supports three (mutually exclusive) means for providing slice argum
 The following example demonstrates each invocation style achieving equivalent results.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // 1. Using a MultiSlice:
 var x = scalar2ndarray( 10.0 );
@@ -174,11 +187,11 @@ The function supports the following `options`:
 By default, the function throws an error when provided a slice which exceeds array bounds. To ignore slice indices exceeding array bounds, set the `strict` option to `false`.
 
 ```javascript
-import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
-import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+var Slice = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 // Define an input array:
 var x = scalar2ndarray( 10.0 );
@@ -235,12 +248,12 @@ var arr = ndarray2array( y );
 <!-- eslint-disable new-cap -->
 
 ```javascript
-import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import ndzeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
-import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@deno/mod.js';
-import sliceAssign from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice-assign@deno/mod.js';
+var E = require( '@stdlib/slice-multi' );
+var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var ndzeros = require( '@stdlib/ndarray-zeros' );
+var slice = require( '@stdlib/ndarray-slice' );
+var sliceAssign = require( '@stdlib/ndarray-slice-assign' );
 
 // Alias `null` to allow for more compact indexing expressions:
 var _ = null;
@@ -341,7 +354,7 @@ var a6 = ndarray2array( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -371,8 +384,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-slice-assign.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-slice-assign
 
-[test-image]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml/badge.svg?branch=v0.2.1
-[test-url]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml?query=branch:v0.2.1
+[test-image]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/ndarray-slice-assign/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-slice-assign/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-slice-assign?branch=main
@@ -404,25 +417,25 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-slice-assign/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor/tree/deno
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi/tree/deno
+[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/deno
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
 
-[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/ndarray-safe-casts/tree/deno
+[@stdlib/ndarray/safe-casts]: https://github.com/stdlib-js/ndarray-safe-casts
 
-[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/ndarray-same-kind-casts/tree/deno
+[@stdlib/ndarray/same-kind-casts]: https://github.com/stdlib-js/ndarray-same-kind-casts
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/deno
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/deno
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array/tree/deno
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
 
-[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice/tree/deno
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
 
 <!-- </related-links> -->
 
