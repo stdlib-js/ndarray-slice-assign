@@ -12,6 +12,9 @@
 
 <details>
 
+-   [`1aebcbc`](https://github.com/stdlib-js/stdlib/commit/1aebcbc907b6ab1ed9760a08edfc5704c995faa3) - **test:** fix failing tests _(by Athan Reines)_
+-   [`45cae52`](https://github.com/stdlib-js/stdlib/commit/45cae5273df53dbddc94ef799b9b09933ea1d9f4) - **test:** fix element access _(by Athan Reines)_
+-   [`239b567`](https://github.com/stdlib-js/stdlib/commit/239b567f8984cd6cbc0c0719fee21574ea82dac7) - **test:** fix property name _(by Athan Reines)_
 -   [`52807fc`](https://github.com/stdlib-js/stdlib/commit/52807fce11e6cb69dc6f7e82622844eada14d232) - **refactor:** consolidate overloads _(by Athan Reines)_
 -   [`32bbcb3`](https://github.com/stdlib-js/stdlib/commit/32bbcb3b3dae1f028fd18166ee7875a93d44d0ee) - **refactor:** update paths _(by Athan Reines)_
 -   [`ed9c0a5`](https://github.com/stdlib-js/stdlib/commit/ed9c0a5e55ff09af3dd6af8c38615480e2c1828e) - **refactor:** update paths _(by Athan Reines)_
