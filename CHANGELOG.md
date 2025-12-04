@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-07)
+## Unreleased (2025-12-04)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`2ffc422`](https://github.com/stdlib-js/stdlib/commit/2ffc422e0a5e583d45776ea7efc359186379bb0c) - **docs:** fix TSDoc return annotation values and example code _(by Philipp Burckhardt)_
 -   [`1aebcbc`](https://github.com/stdlib-js/stdlib/commit/1aebcbc907b6ab1ed9760a08edfc5704c995faa3) - **test:** fix failing tests _(by Athan Reines)_
 -   [`45cae52`](https://github.com/stdlib-js/stdlib/commit/45cae5273df53dbddc94ef799b9b09933ea1d9f4) - **test:** fix element access _(by Athan Reines)_
 -   [`239b567`](https://github.com/stdlib-js/stdlib/commit/239b567f8984cd6cbc0c0719fee21574ea82dac7) - **test:** fix property name _(by Athan Reines)_
@@ -30,9 +31,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Philipp Burckhardt
 
 </section>
 
